@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar nuevo pedido{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	
+ 	<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+			<h2>Agregar nuevo pedido...</h2>
+			<fieldset>
+				<form action="/pedidos/add" method="POST" role="form">
+				  <div class="form-group">
+				    <label>Codigo</label>
+				    <input name="codigo" type="text" class="form-control"  placeholder="Enter code">
+				  </div>
+				  <div class="form-group">
+				    <label>Descripcion</label>
+				    <textarea name="descripcion" class="form-control" rows="3" placeholder="Descripcion"></textarea>
+				  </div>
+				  <button type="submit"  class="btn btn-default">Submit</button>
+				</form>
+			</fieldset>
+ 			</div>
+	</div>
+</div>
+
+{% endblock %}
+
+	
